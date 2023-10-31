@@ -1,20 +1,20 @@
 
 var canvas = new fabric.Canvas('myCanvas')
-blockY = 1;
-blockX = 1;
+block_y = 1;
+block_x = 1;
 
 blockImageWidth = 350;
 blockImageHeight = 430;
 
 var blockImageObject = "";
 
-function newImage(get_image) {
+function new_image(get_image) {
 	fabric.Image.fromURL(get_image, function (Img) {
-		blockImageObject = Img;
+		block_image_object = Img;
 
-		blockImageObject.scaleToWidth(block_image_Width);
-		blockImageObject.scaleToHeight(block_image_height);
-		blockImageObject.set({
+		block_image_object.scaleToWidth(blockImageWidth);
+		block_image_object.scaleToHeight(blockImageHeight);
+		block_image_object.set({
 			top: block_y,
 			left: block_x
 		});
@@ -31,6 +31,7 @@ function myKeyDown(e) {
 	if (keyPressed == '67') // adicione os códigos adequados às teclas
 	{
 		new_image('rr1.png')
+		console.log(keyPressed)
 	}
 	if (keyPressed == '86') {
 		blockX = 200;
@@ -47,7 +48,7 @@ function myKeyDown(e) {
 	}
 	if (keyPressed == '73') {
 		blockX = 700;
-		new_image('backg.jpg')
+		new_image('br.png')
 	}
 
 }
